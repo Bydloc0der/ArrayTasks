@@ -18,7 +18,7 @@ namespace AscendingNumbersByBubbleMethod
         {
             if (nums == null)
             {
-                Console.WriteLine("Введены не верные данные. В массиве отсуствуют числа"); 
+                Console.WriteLine("Ошибка. null - не является аргументом."); 
                 Console.ReadKey();
                 Environment.Exit(0);
             }
@@ -28,7 +28,6 @@ namespace AscendingNumbersByBubbleMethod
                 Console.ReadKey();
                 Environment.Exit(0);
             }
-
             int swap = 0; // данная переменая будет менять местами элементы массива.
             int holdLastElement = 1; // данная переменная позволяет обрабатывать на 1 элемент меньше, при сортировке массива.
             for (int a = 0; a < nums.Length; ++a)
@@ -42,14 +41,9 @@ namespace AscendingNumbersByBubbleMethod
                         nums[b] = nums[b + 1];
                         nums[b + 1] = swap;
                     }
-                    else
-                    {
-                        continue;
-                    }
                 }
                 ++holdLastElement;
             }
-
             return  nums;         
         }
     }
