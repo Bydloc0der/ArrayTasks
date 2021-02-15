@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AscendingNumbersByBubbleMet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StupidSort", "StupidSort\StupidSort.csproj", "{7F4FE8FA-E605-4C7F-B48A-D4993922C7AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GnomeSort", "GnomeSort\GnomeSort.csproj", "{AFC05B7D-0D0F-401F-8698-2B622B24F1FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7F4FE8FA-E605-4C7F-B48A-D4993922C7AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F4FE8FA-E605-4C7F-B48A-D4993922C7AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F4FE8FA-E605-4C7F-B48A-D4993922C7AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFC05B7D-0D0F-401F-8698-2B622B24F1FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFC05B7D-0D0F-401F-8698-2B622B24F1FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFC05B7D-0D0F-401F-8698-2B622B24F1FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFC05B7D-0D0F-401F-8698-2B622B24F1FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
