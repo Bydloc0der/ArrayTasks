@@ -10,17 +10,16 @@ namespace MultidimensionalArrays
     {
         static void Main(string[] args)
         {
-            int N = 3;
-            int[,] nums;
-            SampleMethod(N);
-            int rows = nums.GetUpperBound(0) + 1;
-            int columns = nums.Length / rows;
+            int N = 1;
+            int [,]numz = SampleMethod(N);
+            int rows = numz.GetUpperBound(0) + 1;
+            int columns = numz.Length / rows;
             for (int i = 0; i < rows; i++)
             {
                 Console.Write("{");
                 for (int j = 0; j < columns; j++)
                 {
-                    Console.Write($"{nums[i, j]}");
+                    Console.Write($"{numz[i, j]}");
                     if (j < columns - 1)
                     {
                         Console.Write(",");
@@ -58,7 +57,7 @@ namespace MultidimensionalArrays
                     ++elementСounter;
                 }
             }
-            return new int[N, N];
+            return nums;
         }
            
         }
