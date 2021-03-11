@@ -11,7 +11,7 @@ namespace MultidimensionalArrays
         static void Main(string[] args)
         {
             int N = 1;
-            int [,]numz = SampleMethod(N);
+            int[,] numz = SampleMethod(N);
             int rows = numz.GetUpperBound(0) + 1;
             int columns = numz.Length / rows;
             for (int i = 0; i < rows; i++)
@@ -40,7 +40,6 @@ namespace MultidimensionalArrays
                 Environment.Exit(0);
             }
             if (N <= 0)
-
             {
                 Console.WriteLine("Ошибка. Аргумент N не может быть меньше или равен нулю.");
                 Console.ReadKey();
@@ -59,7 +58,6 @@ namespace MultidimensionalArrays
             }
             return nums;
         }
-           
-        }
     }
+}
 
