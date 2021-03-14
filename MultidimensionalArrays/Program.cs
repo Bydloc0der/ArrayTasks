@@ -11,7 +11,7 @@ namespace MultidimensionalArrays
         static void Main(string[] args)
         {
             int N = 1;
-            int[,] numz = SampleMethod(N);
+            int[,] numz = AssignmentOfElements(N);
             int rows = numz.GetUpperBound(0) + 1;
             int columns = numz.Length / rows;
             for (int i = 0; i < rows; i++)
@@ -31,20 +31,15 @@ namespace MultidimensionalArrays
             Console.ReadKey();
         }
 
-        static int[,] SampleMethod(int N)
+        static int[,] AssignmentOfElements(int N)
         {
-            if (N == null)
-            {
-                Console.WriteLine("Ошибка. Аргумент N не может быть null.");
-                Console.ReadKey();
-                Environment.Exit(0);
-            }
             if (N <= 0)
             {
                 Console.WriteLine("Ошибка. Аргумент N не может быть меньше или равен нулю.");
                 Console.ReadKey();
                 Environment.Exit(0);
             }
+
             int[,] nums = new int[N, N];
             int elementСounter = 1; //данная переменная будет давать значения элементам в массиве
 
