@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GnomeSort", "GnomeSort\Gnom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultidimensionalArrays", "MultidimensionalArrays\MultidimensionalArrays.csproj", "{FC6093F2-A34A-4229-9D39-83ED74C96BE0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvertSort", "InvertSort\InvertSort.csproj", "{2E64C395-A403-4A93-999F-082437F66910}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{FC6093F2-A34A-4229-9D39-83ED74C96BE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC6093F2-A34A-4229-9D39-83ED74C96BE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC6093F2-A34A-4229-9D39-83ED74C96BE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E64C395-A403-4A93-999F-082437F66910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E64C395-A403-4A93-999F-082437F66910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E64C395-A403-4A93-999F-082437F66910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E64C395-A403-4A93-999F-082437F66910}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
