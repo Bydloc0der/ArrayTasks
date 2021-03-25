@@ -10,24 +10,26 @@ namespace InvertSort
     {
         static void Main(string[] args)
         {
-            int[,] nums = { { 250, 500,750,1000}, { 1250,1500,1750,2000}, { 2250,2500,2750,3000 }, { 3250, 3500,3750,4000 } };
-            int[,] numz = Invert(nums);
-            int rows = numz.GetUpperBound(0) + 1;
-            int columns = numz.Length / rows;
+            int[,] nums = { { 1,2,3,4,5}, { 6,7,8,9,10}, { 11,12,13,14,15 }, { 16,17,18,19,20 },{ 21,22,23,24,25} };
+            int[,] invertNums = Invert(nums);
+            int rows = invertNums.GetUpperBound(0) + 1;
+            int columns = invertNums.Length / rows;
             for (int a = 0; a < rows; a++)
             {
+
                 for (int b = 0; b < columns; b++)
                 {
-                    Console.Write($"{numz[a, b]} \t");
+                    Console.Write($"{nums[a, b]} \t");
                 }
                 Console.WriteLine();
             }
             Console.ReadKey();
         }
-        static int[,] Invert(int[,] nums)
+        static int[,] Invert(int[,] invertNums)
         {
-            int rows = nums.GetUpperBound(0) + 1;
-            int columns = nums.GetUpperBound(1) + 1;
+
+            int rows = invertNums.GetUpperBound(0) + 1;
+            int columns = invertNums.GetUpperBound(1) + 1;
 
             if (rows != columns)
             {
@@ -35,22 +37,26 @@ namespace InvertSort
                 Console.ReadKey();
                 Environment.Exit(0);
             }
+
             int swap = 0; // переменная будет заменять элементы в массиве
             int numberOfElementInRow = 0; // переменная указывает номер элемента в ряду
 
             for (int a = rows-1; a > 0; --a)
             {
                 int counter = 1;// переменная позволяет отсчитывать расстояние между элементами, которые будут меняться, при помощи переменной "swap"
+                
                 while (a - counter >= 0)
                 {
-                    swap = nums[a - counter, numberOfElementInRow];
-                    nums[a - counter, numberOfElementInRow] = nums[a , numberOfElementInRow + counter];
-                    nums[a , numberOfElementInRow + counter] = swap;
+                    swap = invertNums[a - counter, numberOfElementInRow];
+                    invertNums[a - counter, numberOfElementInRow] = invertNums[a , numberOfElementInRow + counter];
+                    invertNums[a , numberOfElementInRow + counter] = swap;
                     ++counter;
                 }
+
                 ++numberOfElementInRow;
             }
-            return nums;
+
+            return invertNums;
         }
     }
 }
