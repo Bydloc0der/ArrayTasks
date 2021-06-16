@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultidimensionalArrays", "M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvertSort", "InvertSort\InvertSort.csproj", "{2E64C395-A403-4A93-999F-082437F66910}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpiralArray", "SpiralArray\SpiralArray.csproj", "{66E5D438-CA7D-4B14-9478-CBF7B607D6F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{2E64C395-A403-4A93-999F-082437F66910}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E64C395-A403-4A93-999F-082437F66910}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E64C395-A403-4A93-999F-082437F66910}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66E5D438-CA7D-4B14-9478-CBF7B607D6F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66E5D438-CA7D-4B14-9478-CBF7B607D6F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66E5D438-CA7D-4B14-9478-CBF7B607D6F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66E5D438-CA7D-4B14-9478-CBF7B607D6F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
