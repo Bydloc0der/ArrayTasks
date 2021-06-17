@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SpiralArray
+namespace SpiralArrayWithThe_X_OnTheMiddle
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int N =7;
-            char X = 'X'; 
+            int N = 23;
+            char X = 'X';
             char space = ' ';
-            char[,] array = MadeSpiral(N,X,space);
+            char[,] array = MadeSpiral(N, X, space);
             int rows = array.GetUpperBound(0) + 1;
             int columns = array.Length / rows;
 
@@ -35,7 +35,7 @@ namespace SpiralArray
         /// <param name="space"> Символ, который будет "пустотой" в спирали</param>
         /// <returns></returns>
 
-        static char[,] MadeSpiral (int N, char X, char space)
+        static char[,] MadeSpiral(int N, char X, char space)
         {
             if (0 == N % 2 || N < 5)
             {
@@ -48,11 +48,11 @@ namespace SpiralArray
             int rows = array.GetUpperBound(0) + 1;
             int columns = array.Length / rows;
             int s = N - 1;
-
-            for (int a = 0; a < N+1/2; ++a)
+            int numberOfCircle = (N + 1) / 2;// количество "кругов"  символов.
+            for (int a = 0; a < N + 1 / 2; ++a)
             {
                 char mark;
-                if (a % 2 == 0)
+                if ((numberOfCircle - a) % 2 == 0)
                 {
                     mark = X;
                 }
@@ -60,7 +60,7 @@ namespace SpiralArray
                 {
                     mark = space;
                 }
-                    
+
                 int counter = 0;
 
                 while (counter + a < N - a)

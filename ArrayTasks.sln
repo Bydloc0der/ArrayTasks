@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvertSort", "InvertSort\In
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpiralArray", "SpiralArray\SpiralArray.csproj", "{66E5D438-CA7D-4B14-9478-CBF7B607D6F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpiralArrayWithThe'X'OnTheMiddle", "SpiralArrayWithThe'X'OnTheMiddle\SpiralArrayWithThe'X'OnTheMiddle.csproj", "{8B8A1553-40A7-4FB6-802C-ADD836B6502C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{66E5D438-CA7D-4B14-9478-CBF7B607D6F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66E5D438-CA7D-4B14-9478-CBF7B607D6F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66E5D438-CA7D-4B14-9478-CBF7B607D6F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B8A1553-40A7-4FB6-802C-ADD836B6502C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B8A1553-40A7-4FB6-802C-ADD836B6502C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B8A1553-40A7-4FB6-802C-ADD836B6502C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B8A1553-40A7-4FB6-802C-ADD836B6502C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
