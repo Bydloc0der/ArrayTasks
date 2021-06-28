@@ -10,7 +10,7 @@ namespace SpiralArrayWithThe_X_OnTheMiddle
     {
         static void Main(string[] args)
         {
-            int N = 23;
+            int N = 15;
             char X = 'X';
             char space = ' ';
             char[,] array = MadeSpiral(N, X, space);
@@ -54,11 +54,11 @@ namespace SpiralArrayWithThe_X_OnTheMiddle
                 char mark;
                 if ((numberOfCircle - a) % 2 == 0)
                 {
-                    mark = X;
+                    mark = space;
                 }
                 else
                 {
-                    mark = space;
+                    mark = X;
                 }
 
                 int counter = 0;

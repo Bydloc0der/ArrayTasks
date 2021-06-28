@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpiralArray", "SpiralArray\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpiralArrayWithThe'X'OnTheMiddle", "SpiralArrayWithThe'X'OnTheMiddle\SpiralArrayWithThe'X'OnTheMiddle.csproj", "{8B8A1553-40A7-4FB6-802C-ADD836B6502C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CavityJaggedArray", "CavityJaggedArray\CavityJaggedArray.csproj", "{D1070886-00E9-4679-8DB4-5EA361435583}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{8B8A1553-40A7-4FB6-802C-ADD836B6502C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B8A1553-40A7-4FB6-802C-ADD836B6502C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B8A1553-40A7-4FB6-802C-ADD836B6502C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1070886-00E9-4679-8DB4-5EA361435583}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1070886-00E9-4679-8DB4-5EA361435583}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1070886-00E9-4679-8DB4-5EA361435583}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1070886-00E9-4679-8DB4-5EA361435583}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
