@@ -11,7 +11,7 @@ namespace CavityJaggedArray
         static void Main(string[] args)
         {
             int N = 29;
-            char[][] array = MadeCavity(N);
+            char[][] array = GetCavityArray(N);
 
             for (int i = 0; i < array.Length; i++)
             {
@@ -19,6 +19,7 @@ namespace CavityJaggedArray
                 {
                     Console.Write($"{array[i][j]}");
                 }
+
                 Console.WriteLine();
             }
             Console.ReadKey();
@@ -28,7 +29,7 @@ namespace CavityJaggedArray
         /// </summary>
         /// <param name="N"></param>
         /// <returns>Заполненный зубчатый массив</returns>
-        static char[][] MadeCavity(int N)
+        static char[][] GetCavityArray(int N)
         {
             if (N < 3)
             {
@@ -39,17 +40,17 @@ namespace CavityJaggedArray
 
             char symbol = 'Z';//Символ, который будет отображать впадину.
             char[][] nums = new char[N][];// зубчатый массив
-            int lenght = N / 2;// длина самого верхнего и нижнего массива
+            int length = N / 2;// длина самого верхнего и нижнего массива
             if (N % 2 != 0)
             {
-                lenght += 1;
+                length += 1;
             }
 
             int counter = 0;// переменная, которая будет помогать уменьшать длинну нижних массивов, для создания впадины
 
-            for (int a = 0; a < lenght; ++a)
+            for (int a = 0; a < length; ++a)
             {
-                nums[a] = new char[lenght - a];
+                nums[a] = new char[length - a];
 
                 for (int c = 0; c < nums[a].Length; ++c)
                 {
@@ -57,9 +58,9 @@ namespace CavityJaggedArray
                 }
             }
 
-            for (int d = N - 1; d >= lenght; --d)
+            for (int d = N - 1; d >= length; --d)
             {
-                nums[d] = new char[lenght - counter];
+                nums[d] = new char[length - counter];
 
                 for (int e = 0; e < nums[d].Length; ++e)
                 {
