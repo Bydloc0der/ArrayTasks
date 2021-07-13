@@ -10,37 +10,47 @@ namespace CubeArray
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите целое число, не меньше 3-ёх.");
-            int N = Convert.ToInt32(Console.ReadLine());
-            
-            char[][][] nums = GetTheCube(N);
-             
-                for (int i = 0; i < N; ++i)
+            Console.WriteLine("Введите целое число, не меньше нуля. Чтобы выйти из программы - напишите 'выход'.");
+            string result = Console.ReadLine();// результат ввода пользователем.
+
+            if (result == "выход")
+            {
+                Environment.Exit(0);
+            }
+
+            int cubeSize = Convert.ToInt32(result);// переменная означает размер сторон куба 
+            char[][][] nums = GetTheCube(cubeSize);
+
+            for (int i = 0; i < cubeSize; ++i)
+            {
+                Console.WriteLine($"Срез {i + 1}");
+
+                for (int j = 0; j < cubeSize; ++j)
                 {
-                    Console.WriteLine($"Срез {i+1}");
 
-                    for (int j = 0; j < N; ++j)
+                    for (int k = 0; k < cubeSize; ++k)
                     {
-
-                        for (int k = 0; k < N; ++k)
-                        {
-                            Console.Write(nums[i][j][k]);
-                        }
-
-                        Console.WriteLine();
+                        Console.Write(nums[i][j][k]);
                     }
 
                     Console.WriteLine();
                 }
 
+                Console.WriteLine();
+            }
+
             Console.ReadKey();
 
         }
-
-        static char[][][] GetTheCube(int N)
+        /// <summary>
+        /// Метод возвращает заполненный массив, символом X
+        /// </summary>
+        /// <param name="cubeSize"></param>
+        /// <returns>Заполненный зубчатый массив</returns>
+        static char[][][] GetTheCube(int cubeSize)
         {
 
-            if (N < 3)
+            if (cubeSize < 0)
             {
                 Console.WriteLine("Ошибка. Неверно введён аргумент.");
                 Console.ReadKey();
@@ -48,17 +58,17 @@ namespace CubeArray
             }
 
             char symbol = 'X';
-            char[][][] nums = new char[N][][];
+            char[][][] nums = new char[cubeSize][][];
 
-            for (int a = 0; a < N; ++a)
+            for (int a = 0; a < cubeSize; ++a)
             {
-                nums[a] = new char[N][];
+                nums[a] = new char[cubeSize][];
 
                 if (a == 0 || a == nums[a].Length - 1)
                 {
                     for (int b = 0; b < nums[a].Length; ++b)
                     {
-                        nums[a][b] = new char[N];
+                        nums[a][b] = new char[cubeSize];
 
                         for (int c = 0; c < nums[a][b].Length; ++c)
                         {
@@ -77,12 +87,12 @@ namespace CubeArray
                         }
                     }
                 }
-
                 else
                 {
-                    for (int d = 0; d < N;++d)
+                    for (int d = 0; d < cubeSize; ++d)
                     {
-                        nums[a][d] = new char[N];
+                        nums[a][d] = new char[cubeSize];
+
                         if (d == 0 || d == nums[a][d].Length - 1)
                         {
                             nums[a][d][d] = symbol;
