@@ -11,12 +11,13 @@ namespace CubeArray
         static void Main(string[] args)
         {
             Console.WriteLine("Введите целое число, не меньше нуля. Чтобы выйти из программы - напишите 'выход'.");
-            for (int f = 0; f < 1;)
+            int endCycle = 0; // переменная будет счётчиком, которая закроет программу в случае, если пользователь введёт число, после получения результата
+            while (endCycle <= 0)
             {
                 string result = Console.ReadLine();// результат ввода пользователем.
                 int cubeSize; // размер куба
                 bool checkNumber = int.TryParse(result, out cubeSize);
-
+                
                 if (result == "выход")
                 {
                     Environment.Exit(0);
@@ -24,8 +25,9 @@ namespace CubeArray
                 else if (checkNumber == true)
                 {
                     char[][][] nums = GetTheCube(cubeSize);
-                    GetResultOnScreen(nums, cubeSize);
-                    ++f;
+                    ResultOnScreen(nums, cubeSize);
+                    Console.ReadKey();
+                    ++endCycle;
                 }
                 else
                 {
@@ -36,7 +38,7 @@ namespace CubeArray
         /// <summary>
         /// Метод возвращает заполненный массив, символом X
         /// </summary>
-        /// <param name="cubeSize"></param>
+        /// <param name="cubeSize">число, обозначающее объем куба</param>
         /// <returns>Заполненный зубчатый массив</returns>
         static char[][][] GetTheCube(int cubeSize)
         {
@@ -85,6 +87,7 @@ namespace CubeArray
                     for (int d = 0; d < cubeSize; ++d)
                     {
                         nums[a][d] = new char[cubeSize];
+
                         for (int e = 0; e < cubeSize; ++e)
                         {
                             if ((d == 0 || d == nums[a][d].Length - 1) && (e == 0 || e == nums[a][d].Length - 1))
@@ -107,9 +110,9 @@ namespace CubeArray
         /// <summary>
         /// Метод вывдоит результат на экран (срез куба)
         /// </summary>
-        /// <param name="nums"></param>
-        /// <param name="cubeSize"></param>
-        static void GetResultOnScreen(char[][][] nums, int cubeSize)
+        /// <param name="nums">массив, заполнененный символами в виде куба</param>
+        /// <param name="cubeSize">число, обозначающее объем куба</param>
+        static void ResultOnScreen(char[][][] nums, int cubeSize)
         {
             for (int i = 0; i < cubeSize; ++i)
             {
@@ -128,9 +131,6 @@ namespace CubeArray
 
                 Console.WriteLine();
             }
-
-            Console.ReadKey();
-
         }
     }
 }
