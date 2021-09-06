@@ -11,8 +11,9 @@ namespace CubeArray
         static void Main(string[] args)
         {
             Console.WriteLine("Введите целое число, не меньше нуля. Чтобы выйти из программы - напишите 'выход'.");
-            int endCycle = 0; // переменная будет счётчиком, которая закроет программу в случае, если пользователь введёт число, после получения результата
-            while (endCycle <= 0)
+            bool endlessCycle = true; // переменная, которая поможет запустить бесконечный цикл
+
+            while (endlessCycle == true)
             {
                 string result = Console.ReadLine();// результат ввода пользователем.
                 int cubeSize; // размер куба
@@ -25,9 +26,9 @@ namespace CubeArray
                 else if (checkNumber == true)
                 {
                     char[][][] nums = GetTheCube(cubeSize);
-                    ResultOnScreen(nums, cubeSize);
+                    DisplayCubeOnTheConsole(nums, cubeSize);
                     Console.ReadKey();
-                    ++endCycle;
+                    endlessCycle = false;
                 }
                 else
                 {
@@ -112,7 +113,7 @@ namespace CubeArray
         /// </summary>
         /// <param name="nums">массив, заполнененный символами в виде куба</param>
         /// <param name="cubeSize">число, обозначающее объем куба</param>
-        static void ResultOnScreen(char[][][] nums, int cubeSize)
+        static void DisplayCubeOnTheConsole(char[][][] nums, int cubeSize)
         {
             for (int i = 0; i < cubeSize; ++i)
             {
